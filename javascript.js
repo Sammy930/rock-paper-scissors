@@ -21,18 +21,19 @@ function getComputerChoice() {
 function getHumanChoice() {
     // Takes input from the user and returns the matching choice
 
+    while (true) {
+        let choice = prompt("Enter your choice: ").toLowerCase();
 
-    let choice = prompt("Enter your choice: ").toLowerCase();
-
-    if (choice === "r" || choice === "rock") {
-        return R;
-    } else if (choice === "p" || choice === "paper") {
-        return P;
-    } else if (choice === "s" || choice === "scissor") {
-        return S;
-    } else {
-        console.log("That's not a valid choice.");
-    };
+        if (choice === "r" || choice === "rock") {
+            return R;
+        } else if (choice === "p" || choice === "paper") {
+            return P;
+        } else if (choice === "s" || choice === "scissor") {
+            return S;
+        } else {
+            alert("That's not a valid choice, please try again");
+        };
+    }
 }
 
 function playRound(humanChoice, computerChoice) {
