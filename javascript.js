@@ -4,7 +4,7 @@ let humanScore = 0, computerScore = 0;
 
 
 function getComputerChoice() {
-    // Generates a random integer between 0 and 8 and returns one of the string values (R, P, S) based on its value such that all choices have an equal probability
+    // Generates a random integer between 0 and 8 and returns one of the string values (R/P/S) based on its value such that all choices have an equal probability to be returned
 
 
     let prob = Math.floor(Math.random()*9);
@@ -62,4 +62,31 @@ function playRound(humanChoice, computerChoice) {
         }
     }
 
+}
+
+function playGame() {
+    // Plays a game of rock paper scissors consisting of 5 rounds then displays the scores and the winner of the game
+
+
+    let play = true;    // playing condition 
+
+    while (play === true) {
+        let i = 0;
+        while (i < 5) {
+            let humanchoice = getHumanChoice();
+            let computerchoice = getComputerChoice();
+            
+            playRound(humanchoice, computerchoice);
+            
+            i++;
+        }
+
+        console.log(`The score is: 
+            P:${humanScore} C:${computerScore}`);
+
+        let p = prompt("Play again? (Y/N)");     //Ask the player if they want to play another round and change the playing condition based on their input
+        if (p === "N") {
+            play = false;
+        };
+    }
 }
