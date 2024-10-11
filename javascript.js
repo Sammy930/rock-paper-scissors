@@ -41,28 +41,39 @@ function playRound(humanChoice, computerChoice) {
     // Takes both the player's and the computer's choice and Increments the humanScore or computerScore variable based on the round winner
 
 
+    let human = 0, computer = 0;  //local human and computer score variables to track the winner of each round
+
     if (humanChoice === computerChoice) {
     } else if (humanChoice === R) {
         if (computerChoice === P) {
             computerScore++;
+            computer++;
         } else {
             humanScore++;
+            human++;
         }
     } else if (humanChoice === P) {
         if (computerChoice === R) {
             humanScore++;
+            human++;
         } else {
             computerScore++;
+            computer++;
         }
     } else if (humanChoice === S) {
         if (computerChoice === R) {
             computerScore++;
+            computer++;
         } else {
             humanScore++;
+            human++;
         }
     }
                 
-    alert(`Player: ${humanChoice}\n-------------------------\nComputer: ${computerChoice}`);
+    alert(`Player: ${humanChoice}\n-------------------------\nComputer: ${computerChoice}
+        
+        ${  human > computer ? "You win this round!" :  
+            human < computer ? "Computer wins this round" : "It's a draw!"}`);     //display results
      
 }
 
