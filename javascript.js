@@ -21,7 +21,9 @@ function getComputerChoice() {
 function getHumanChoice() {
     // Takes input from the user and returns the matching choice
 
+
     while (true) {
+
         let choice = prompt("Enter your choice: ").toLowerCase();
 
         if (choice === "r" || choice === "rock") {
@@ -33,6 +35,7 @@ function getHumanChoice() {
         } else {
             alert("That's not a valid choice, please try again");
         };
+
     }
 }
 
@@ -41,7 +44,7 @@ function playRound(humanChoice, computerChoice) {
     // Takes both the player's and the computer's choice and Increments the humanScore or computerScore variable based on the round winner
 
 
-    let human = 0, computer = 0;  //local human and computer score variables to track the winner of each round
+    let human = 0, computer = 0;    //local human and computer score variables to track the winner of each round
 
     if (humanChoice === computerChoice) {
     } else if (humanChoice === R) {
@@ -84,6 +87,7 @@ function playGame() {
     let play = true;    // playing condition 
 
     while (play === true) {
+
         let i = 0;
         while (i < 5) {
             let humanchoice = getHumanChoice();
@@ -94,22 +98,16 @@ function playGame() {
             i++;
         }
 
-
-        let message;    //message to be displayed depending on who won the game
-        if (humanScore > computerScore) {
-            message = "Player wins!"
-        } else if (humanScore < computerScore) {
-            message = "Computer wins :("
-        } else {
-            message = "Draw"
-        };
-
+        
         alert(`The score is: 
             Player: ${humanScore} | Computer: ${computerScore}
             
-            ${message}`);
+            ${  humanScore > computerScore ? "Player wins!!" :  
+                humanScore < computerScore ? "Computer wins :(" : "Draw"}`);    //Display results
+
 
         while (true) {
+
         let p = prompt("Play again? (Y/N)").toLowerCase();     //Ask the player if they want to play another round and change the playing condition based on their input
         if (p === "n") {
             play = false;
@@ -119,7 +117,9 @@ function playGame() {
         } else {
             alert("invalid input");
         };
+
     };
+
     }
 }
 
