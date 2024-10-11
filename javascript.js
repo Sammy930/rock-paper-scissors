@@ -122,3 +122,12 @@ function playGame() {
     };
     }
 }
+
+
+alert(`Welcome to this simple game of rock-paper-scissor
+    
+To enter your choice either type (rock/paper/scissor) or simply (r/p/s)
+    
+Enjoy :)`);
+
+playGame();
