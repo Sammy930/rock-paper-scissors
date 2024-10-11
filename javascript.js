@@ -83,8 +83,21 @@ function playGame() {
             i++;
         }
 
-        console.log(`The score is: 
-            P:${humanScore} C:${computerScore}`);
+
+        let message;
+        if (humanScore > computerScore) {
+            message = "Player wins!"
+        } else if (humanScore < computerScore) {
+            message = "Computer wins :("
+        } else {
+            message = "Draw"
+        };
+
+        alert(`The score is: 
+            Player: ${humanScore} | Computer: ${computerScore}
+            
+            ${message}`);
+
 
         let p = prompt("Play again? (Y/N)");     //Ask the player if they want to play another round and change the playing condition based on their input
         if (p === "N") {
