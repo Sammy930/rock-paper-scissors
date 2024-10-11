@@ -42,7 +42,6 @@ function playRound(humanChoice, computerChoice) {
 
 
     if (humanChoice === computerChoice) {
-        return;
     } else if (humanChoice === R) {
         if (computerChoice === P) {
             computerScore++;
@@ -62,7 +61,9 @@ function playRound(humanChoice, computerChoice) {
             humanScore++;
         }
     }
-
+                
+    alert(`Player: ${humanChoice}\n-------------------------\nComputer: ${computerChoice}`);
+     
 }
 
 function playGame() {
@@ -78,7 +79,7 @@ function playGame() {
             let computerchoice = getComputerChoice();
             
             playRound(humanchoice, computerchoice);
-            
+
             i++;
         }
 
