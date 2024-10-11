@@ -73,7 +73,7 @@ function playRound(humanChoice, computerChoice) {
         }
     }
                 
-    alert(`Player: ${humanChoice}\n-------------------------\nComputer: ${computerChoice}
+    alert(`Player: ${humanChoice}\n---------------------------\nComputer: ${computerChoice}
         
         ${  human > computer ? "You win this round!" :  
             human < computer ? "Computer wins this round" : "It's a draw!"}`);     //display results
@@ -128,7 +128,8 @@ function playGame() {
 
 alert(`Welcome to this simple game of rock-paper-scissor
     
-To enter your choice either type (rock/paper/scissor) or simply (r/p/s)
+To enter your choice either type (rock/paper/scissor) 
+or simply (r/p/s)
     
 Enjoy :)`);
 
