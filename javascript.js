@@ -109,10 +109,10 @@ function playGame() {
         while (true) {
 
         let p = prompt("Play again? (Y/N)").toLowerCase();     //Ask the player if they want to play another round and change the playing condition based on their input
-        if (p === "n") {
+        if (p === "n" || p === "no") {
             play = false;
             break;
-        } else if (p === "y") {
+        } else if (p === "y" || p === "yes") {
             humanScore = 0;
             computerScore = 0;
             break;
