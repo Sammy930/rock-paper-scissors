@@ -84,7 +84,7 @@ function playGame() {
         }
 
 
-        let message;
+        let message;    //message to be displayed depending on who won the game
         if (humanScore > computerScore) {
             message = "Player wins!"
         } else if (humanScore < computerScore) {
