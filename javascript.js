@@ -1,4 +1,4 @@
-const R = "rock", P = "paper", S = "scissor";
+const R = "rock", P = "paper", S = "scissors";
 
 let humanScore = 0, computerScore = 0;
 
@@ -30,7 +30,7 @@ function getHumanChoice() {
             return R;
         } else if (choice === "p" || choice === "paper") {
             return P;
-        } else if (choice === "s" || choice === "scissor") {
+        } else if (choice === "s" || choice === "scissors") {
             return S;
         } else {
             alert("That's not a valid choice, please try again");
@@ -126,7 +126,7 @@ function playGame() {
 }
 
 
-alert(`Welcome to this simple game of rock-paper-scissor
+alert(`Welcome to this simple game of rock-paper-scissors
     
 To enter your choice either type (rock/paper/scissor) 
 or simply (r/p/s)
