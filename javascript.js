@@ -98,10 +98,16 @@ function playGame() {
             
             ${message}`);
 
-
-        let p = prompt("Play again? (Y/N)");     //Ask the player if they want to play another round and change the playing condition based on their input
-        if (p === "N") {
+        while (true) {
+        let p = prompt("Play again? (Y/N)").toLowerCase();     //Ask the player if they want to play another round and change the playing condition based on their input
+        if (p === "n") {
             play = false;
+            break;
+        } else if (p === "y") {
+            break;
+        } else {
+            alert("invalid input");
         };
+    };
     }
 }
