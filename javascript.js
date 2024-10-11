@@ -34,3 +34,32 @@ function getHumanChoice() {
         console.log("That's not a valid choice.");
     };
 }
+
+function playRound(humanChoice, computerChoice) {
+    // Play a round of rock paper scissors
+    // Takes both the player's and the computer's choice and Increments the humanScore or computerScore variable based on the round winner
+
+
+    if (humanChoice === computerChoice) {
+        return;
+    } else if (humanChoice === R) {
+        if (computerChoice === P) {
+            computerScore++;
+        } else {
+            humanScore++;
+        }
+    } else if (humanChoice === P) {
+        if (computerChoice === R) {
+            humanScore++;
+        } else {
+            computerScore++;
+        }
+    } else if (humanChoice === S) {
+        if (computerChoice === R) {
+            computerScore++;
+        } else {
+            humanScore++;
+        }
+    }
+
+}
