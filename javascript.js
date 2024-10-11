@@ -98,7 +98,7 @@ function playGame() {
             i++;
         }
 
-        
+
         alert(`The score is: 
             Player: ${humanScore} | Computer: ${computerScore}
             
@@ -113,6 +113,8 @@ function playGame() {
             play = false;
             break;
         } else if (p === "y") {
+            humanScore = 0;
+            computerScore = 0;
             break;
         } else {
             alert("invalid input");
