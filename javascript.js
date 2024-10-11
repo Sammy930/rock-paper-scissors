@@ -1,5 +1,8 @@
 const R = "rock", P = "paper", S = "scissor";
 
+let humanScore = 0, computerScore = 0;
+
+
 function getComputerChoice() {
     // Generates a random integer between 0 and 8 and returns one of the string values (R, P, S) based on its value such that all choices have an equal probability
 
