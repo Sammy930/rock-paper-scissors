@@ -4,10 +4,6 @@ let humanScore = 0, computerScore = 0;
 
 
 function getComputerChoice() {
-    /* Generates a random integer between 0 and 8 and returns one of the string 
-    values (R/P/S) based on its value such that all choices have an equal probability 
-    to be returned */
-
 
     let prob = Math.floor(Math.random()*3);
 
@@ -22,8 +18,6 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    /* Takes input from the user and returns the matching choice */
-
 
     while (true) {
         let choice = prompt("Enter your choice: ").toLowerCase();
@@ -43,10 +37,8 @@ function getHumanChoice() {
 
 function playRound(humanChoice, computerChoice) {
     /* Play a round of rock paper scissors */
-    /* Takes both the player's and the computer's choice and Increments the 
-    humanScore or computerScore variable based on the round winner */
 
-
+    
     let humanScoreLocal = 0, computerScoreLocal = 0;
     /* local score variables to track the winner of each round */
 
@@ -88,15 +80,13 @@ function playRound(humanChoice, computerChoice) {
 }
 
 function playGame() {
-    /* Plays a game of rock paper scissors consisting of 5 rounds then displays
-    the scores and the winner of the game */
+    /* Plays a game of rock paper scissors consisting of 5 rounds */
 
 
     let play = true;    /* playing condition */ 
 
     while (play === true) {
-
-        /* Play 5 rounds */
+        
         let i = 0;
         while (i < 5) {
             let humanchoice = getHumanChoice();
@@ -113,9 +103,7 @@ function playGame() {
             ${  humanScore > computerScore ? "Player wins!!" :  
                 humanScore < computerScore ? "Computer wins :(" : "Draw"}`);    
 
-
-        /* Ask the player if they want to play another round and change the 
-        playing condition based on their input */
+        
         while (true) {
         let p = prompt("Play again? (Y/N)").toLowerCase();
         if (p === "n" || p === "no") {
